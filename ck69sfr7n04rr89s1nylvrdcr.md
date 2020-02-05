@@ -652,3 +652,24 @@ class RoundLinkedQueue {
 Aaaaaaand that's about it!
 
 ![were-are-done-here.webp](https://cdn.hashnode.com/res/hashnode/image/upload/v1580935929728/ebLYgaAu0.webp)
+
+## Conclusion
+
+I tried to make this a comprehensive introduction to TDD with the Node.js/JavaScript ecosystem. The data structure we had to implement here was intentionally simple so we could follow the methodology as much as possible.
+
+When doing TDD in real world applications, things are usually not so linear. You will find yourself struggling from time to time with the design choices you make while writing your tests. It can be a little frustrating in the beginning, but once you get the gist of it, you will develop a "muscle memory" to avoid the most common pitfalls.
+
+TDD is great, but as almost everything in life, it is not a silver bullet.
+
+Be safe out there!
+
+***
+
+T-t-th-tha-that's i-is a-a-all f-f-fo-f-folks!
+
+
+![thats-all-folks.webp](https://cdn.hashnode.com/res/hashnode/image/upload/v1580936166941/RIWu_DlPS.webp)
+
+***
+
+Did you like what you just read? Why don’t you buy me a beer (or a coffee if it is before 5pm 😅) with  [tippin.me](https://tippin.me/@hbarcelos909)?
