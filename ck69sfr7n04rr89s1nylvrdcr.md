@@ -21,12 +21,12 @@ I could not use websockets, so I would have to buffer these events in my backend
 
 Since Node.JS arrays are dynamic, they did not fit my needs. I did not want a fixed-size array implementation, what I needed was a fixed-sized first-in/first-out (FIFO) data structure, AKA a **queue**, which instead of overflowing when full, should pop its first element and then add the new one at the end.
 
-## Expected behaviour
+## Expected behavior
 
 ![keep-calm-behave-yourself.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1580925435400/pKSQdIeel.png)
 > You better do that!
 
-The data structure described above is rather simple. Its expected behaviour could be summarized as follows:
+The data structure described above is rather simple. Its expected behavior could be summarized as follows:
 
 Adding elements:
 
