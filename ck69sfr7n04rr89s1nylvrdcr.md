@@ -427,7 +427,7 @@ Now we are going to cheat a little bit.
 The last requirement is that the `add` method should return the removed element when the queue is full. What to return when the queue is not full is not in the specification though. In JavaScript, uninitialized values have a special value called `undefined`. It makes sense to return that when adding to the queue does not remove any element, so we can add the following two test cases.
 
 ![sheldon-triggered.webp](https://cdn.hashnode.com/res/hashnode/image/upload/v1580933298455/KGvC42Pai.webp)
-> TDD purists gonna be trigged.
+> TDD purists gonna be triggered.
 
 ```js
 it("Should return the removed element from a full queue", () => {
