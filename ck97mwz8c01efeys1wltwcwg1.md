@@ -1,8 +1,5 @@
 ## Flexbox Gotchas Reloaded
 
-
-![css-is-awesome.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1587331912599/cVH5CC7R2.jpeg)
-
 **Important:** this article describes a problem that cannot be reproduced with Google Chrome, only with Firefox and Edge (I did not test with other browsers). Spoiler alert: [it seems like Chrome intentionally deviates from the spec standard](https://stackoverflow.com/a/49579315/1798341).
 
 ## Intro
