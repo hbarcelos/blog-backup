@@ -17,7 +17,7 @@ When testing Redux, here are a few guidelines:
 
 ### Redux + `redux-thunk`
 
-- Dispatching thunks doesn't have any direct effect. Only after the thunk is called is when we will have the side-effects we need to make our application work.
+- Dispatching thunks doesn't have any direct effect. Only after the thunk is called we will have the side-effects we need to make our application work.
 - Here you can use stubs, spies and sometimes mocks (but [don't abuse mocks](https://medium.com/javascript-scene/mocking-is-a-code-smell-944a70c90a6a)).
 - Because of the way thunks are structured, the only way to test them is by testing their implementation details.
 - The strategy when testing thunks is to setup the store, dispatch the thunk and then asserting whether it dispatched the actions you expected in the order you expected or not.
