@@ -11,7 +11,7 @@ When testing Redux, here are a few guidelines:
 - There is no point in testing reducers, action creators and selectors in isolation. As they are tightly coupled with each other, isolation gives us little to no value.
 - Tests should interact with your Redux slice same way your application will: through action creators and selectors.
 - Avoid assertions like `toEqual`/`toDeepEqual` against the state object, as they create a coupling between your tests and the state structure.
-- Using selectors gives you the granularity you need to run simple assertions.
+    - Selectors give you the granularity you need to run spot on assertions.
 - Selectors and action creators should be boring, so they won't require testing.
 - Your slice is somewhat equivalent to a pure function, which means you don't need any mocking facilities in order to test it.
 
