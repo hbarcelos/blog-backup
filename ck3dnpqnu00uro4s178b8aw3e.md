@@ -9,8 +9,7 @@ When testing Redux, here are a few guidelines:
 
 - The smallest standalone unit in Redux is the entire state slice. Unit tests should interact with it as a whole.
 - There is no point in testing reducers, action creators and selectors in isolation. As they are tightly coupled with each other, isolation gives us little to no value.
-- Tests should interact with your redux slice same way your application will.
-creators and selectors, without having to write tests targeting them in isolation.
+- Tests should interact with your Redux slice same way your application will: through action creators and selectors.
 - Avoid assertions like `toEqual`/`toDeepEqual` against the state object, as they create a coupling between your tests and the state structure.
 - Using selectors gives you the granularity you need to run simple assertions.
 - Selectors and action creators should be boring, so they won't require testing.
