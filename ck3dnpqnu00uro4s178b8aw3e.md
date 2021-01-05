@@ -39,12 +39,14 @@ As a ~most of the time~ TDD practitioner, I have learned that the main reason we
 However, after if you have done this for some time, you realize that writing good tests are as hard as writing production code. Sometimes is even harder. Writing tests takes time. And extra time is something that your clients or the business people in your company will not give you so easily.
 
 ![Hourglass](https://cdn.hashnode.com/res/hashnode/image/upload/v1574465138087/M7XYT_x1t.jpeg)
-Ain't nobody got time for that! (Photo by Aron Visuals on Unsplash)
+> Testing?! Ain't nobody got time for that! (Photo by Aron Visuals on Unsplash)
 
-And it gets worse. Even if you are able to write proper tests, throughout the lifespan of the product/project you are working on, requirements will change, new scenarios will appear. Write too many tests, make them very entangled and any minor change in your application will take a lot of effort to make all tests pass again. Flaky tests are yet another problem. When it fails, you have no idea were to start fixing it. You will probably just re-run the test suite and if it passes, you are good to go.
+And it gets worse. Even if you are able to write proper tests, throughout the lifespan of the product/project you are working on, requirements will change, new scenarios will appear. Write too many tests, make them very entangled and any minor change in your application will take a lot of effort to make all tests pass again. 
+
+Flaky tests are yet another problem. When it fails, you have no idea were to start fixing it. You will probably just re-run the test suite and if it passes, you are good to go.
 
 ![Schrödinger's Paradox](https://cdn.hashnode.com/res/hashnode/image/upload/v1574466460701/jG8dcUyjJ.jpeg)  
-Schrödinger's tests: sometimes they fail, sometimes they pass, but you cannot know for sure (Picture by Jie Qi on Flickr)
+> Schrödinger's tests: sometimes they fail, sometimes they pass, but you cannot know for sure (Picture by Jie Qi on Flickr)
 
 But how do you know if you are writing good tests? What the hell is a good test in the first place?
 
@@ -54,7 +56,7 @@ There is an long debate between two different currents of thoughts known as Lond
 
 Summarizing their differences, while Detroit defends that software should be built bottom-up, with emphasis on design patterns and the [tests should have as little knowledge as possible about the implementation](https://en.wikipedia.org/wiki/Black-box_testing) and have little to no stubbing/mocking at all, London advocates that the design should be top-down, using external constraints as starting point, ensuring maximum isolation between test suites through extensive use of stubs/mocks, which has a side effect of  [having to know how the subject under test is implemented](https://en.wikipedia.org/wiki/White-box_testing).
 
-This is a very brief summary &mdash; even risking being wrong because due to terseness &mdash; but you can find more good references about this two decades old conundrum  [here](https://github.com/testdouble/contributing-tests/wiki/Detroit-school-TDD),  [here](https://github.com/testdouble/contributing-tests/wiki/London-school-TDD) and [here](https://medium.com/@adrianbooth/test-driven-development-wars-detroit-vs-london-classicist-vs-mockist-9956c78ae95f).
+This is a very brief summary &mdash; even risking being wrong because of terseness &mdash; but you can find more good references about this two decades old conundrum  [here](https://github.com/testdouble/contributing-tests/wiki/Detroit-school-TDD),  [here](https://github.com/testdouble/contributing-tests/wiki/London-school-TDD) and [here](https://medium.com/@adrianbooth/test-driven-development-wars-detroit-vs-london-classicist-vs-mockist-9956c78ae95f).
 
 ## Testing in the Real World
 
@@ -64,7 +66,7 @@ What you really need is to be able to take the  [best of both worlds](https://bl
 
 We live in a world where everybody seems obsessed with ~almost~ perfect code coverage, while the problem of [Redundant Coverage](https://github.com/testdouble/contributing-tests/wiki/Redundant-Coverage) is rarely mentioned &mdash; it is not very easy to find online references discussing this. If you abuse tests, you may end up having a hard time when your requirements suddenly change.
 
-In the end we are not paid to write tests, we are paid to solve other people's problems through code. Writing tests is expensive and does not add **perceivable** value to the clients/users. One can argue that there is value added by tests, but in my personal experience it is very hard to make non-technical people to buy that.
+In the end we are not paid to write tests, we are paid to solve other people's problems through code. Writing tests is expensive and does not add **perceivable** value to the clients/users. One can argue that there is value added by tests, but in my personal experience it is very hard to make non-technical people buy that.
 
 What we as Software Engineers should strive for is to write the minimum amount of tests that yields enough confidence in code quality and correctness &mdash; and "enough" is  [highly dependent on context](https://medium.com/javascript-scene/why-cutting-costs-is-expensive-how-9-hour-software-engineers-cost-boeing-billions-b76dbe571957).
 
@@ -72,7 +74,7 @@ What we as Software Engineers should strive for is to write the minimum amount o
 
 Redux is known to have an outstandingly good documentation. In fact this is true. There is not only API docs and some quick examples, as there are also some valuable best practices advice and even links to more in depth discussions regarding Redux and its ecosystem.
 
-However, I believe that the  ["Writing Tests"](https://redux.js.org/recipes/writing-tests) section leaves something to be desired.
+However, I believe that the ["Writing Tests"](https://redux.js.org/recipes/writing-tests) section leaves something to be desired.
 
 ### Testing Action Creators
 
@@ -107,7 +109,7 @@ describe('actions', () => {
 
 While the test is correct and passes just fine, the fundamental problem here is that **it does not add much value**. Your regular action creators should be **very boring**, almost declarative code. You do not need tests for that.
 
-Furthermore, if you use helper libraries like  [`redux-act`](https://github.com/pauldijou/redux-act) or Redux's own [`@reduxjs/toolkit`](https://github.com/reduxjs/redux-toolkit) &mdash; which you **should** &mdash; then there is absolutely no reason at all to write tests for them, as your tests would be testing the helper libs themselves, which are already tested and, more important, are not even owned by you.
+Furthermore, if you use helper libraries like  [`redux-act`](https://github.com/pauldijou/redux-act) or Redux's own [`@reduxjs/toolkit`](https://github.com/reduxjs/redux-toolkit) &mdash; which you **should** &mdash; then there is absolutely no reason at all to write tests for them, as you would be testing the helper libs themselves, which are already tested and, more important, are not even owned by you.
 
 And since action creators can be very prolific in a real app, the amount of test they would require is huge.
 
@@ -278,7 +280,7 @@ The idea now is to write the least amount of test possible, while having a good 
 In other words, the value Redux provides us is the ability to write and read state from a centralized place, called the store. Since Redux is based on the  [Flux Architecture](https://facebook.github.io/flux/), its regular flow is more or less like this:
 
 ![Flux Architecture](https://cdn.hashnode.com/res/hashnode/image/upload/v1574562511467/uPZvznF1P.png)
-The Flux Architecture by Eric Eliott on Medium
+> The Flux Architecture by Eric Eliott on Medium
 
 ### Redux Testing Strategy
 
@@ -324,7 +326,7 @@ export const selectUserName = state => state.auth.userName;
 export const selectIsAuthenticated = createSelector([selectToken], token => token !== '');
 ``` 
 
-Nothing really special about this file. I am using the `createSlice` helper, which saves me a lot of boilerplate code. The exports structure follows more or less the Ducks pattern, the main difference being that  I don't explicitly export the action types, as they are defined in the `type` property of the action creators (e.g.: `signIn.type` returns `'auth/signIn'`).
+Nothing really special about this file. I am using the `createSlice` helper, which saves me a lot of boilerplate code. The exports structure follows more or less the Ducks Pattern, the main difference being that  I don't explicitly export the action types, as they are defined in the `type` property of the action creators (e.g.: `signIn.type` returns `'auth/signIn'`).
 
 Now the test suite implemented using [`jest`](https://jestjs.io/):
 
@@ -372,7 +374,7 @@ If your slice grows bigger, by using selectors when testing state transitions, y
 
 An observant reader might have noticed that this style of testing resembles more the one derived from  [Detroit School](https://github.com/testdouble/contributing-tests/wiki/Detroit-school-TDD). There are no mocks, stubs, spies or whatever. Since reducers are simply pure functions, there is no  point in using those.
 
-However, this slice is rather too simple. Authentication is usually tied to some backend service, which means we have to manage the communication between the latter and our application, that is, we have do handle side-effects as well as the loading state. Things start to get more complicated.
+However, this slice is rather too simple. Authentication is usually tied to some back-end service, which means we have to manage the communication between the latter and our application, that is, we have do handle side-effects as well as the loading state. Things start to get more complicated.
 
 ### Testing a More Realistic Slice
 
@@ -433,7 +435,7 @@ export const selectIsAuthenticated = createSelector([selectToken], token => toke
 
 The first thing you might notice is that our state shape changed. We nested `userName` and `token` in a `user` property. Had we not created selectors, this would break all the tests and code that depends on this slice. However, since we did have the selectors, the only changes we need to do are in the `selectToken` and `selectUserName`.
 
-Notice that our test suite is completely broken now, but that is because we fundamentally changed the slice. It is not hard to get it fixed though:
+Notice that our test suite is still broken, but that is because we fundamentally changed the slice. It is not hard to get it fixed though:
 
 ```js
 describe('auth slice', () => {
@@ -517,7 +519,7 @@ In that case, all test cases above would fail.
 
 ### Testing Side-Effects
 
-We are getting there, but our slice is not complete yet. It lacks the part that orchestrates the sign in flow and communicates with the backend service API.
+We are getting there, but our slice is not complete yet. It lacks the part that orchestrates the sign in flow and communicates with the back-end service API.
 
 Redux itself deliberately does not handle side-effects. In order to be able to do that, you need a Redux Middleware that will handle that for you. While you can  [pick your own poison](https://redux.js.org/introduction/ecosystem#side-effects), `@reduxjs/toolkit` already ships with `redux-thunk`, so that is what we are going to use.
 
@@ -606,7 +608,7 @@ describe('thunks', () => {
 
 So unlike reducers, which are easier to test with Detroit School methodology, we leverage London School style to test our thunks, because that is what makes sense.
 
-Because we are testing implementation details, whenever code changes, our tests must reflect that. In a real world app, after a sucessful signin, you probably want to redirect the user somewhere. If we were using something like  [connected-react-router](https://github.com/supasate/connected-react-router), we would end up with a code like this:
+Because we are testing implementation details, whenever code changes, our tests must reflect that. In a real world app, after a successful sign-in, you probably want to redirect the user somewhere. If we were using something like  [connected-react-router](https://github.com/supasate/connected-react-router), we would end up with a code like this:
 
 ```diff
 +import { push } from 'connected-react-router';
