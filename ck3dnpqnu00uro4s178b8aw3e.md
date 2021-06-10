@@ -60,7 +60,7 @@ This is a very brief summary &mdash; even risking being wrong because of tersene
 
 ## Testing in the Real World
 
-So which one is right, Londoners or Detrotians?  [Both of them and neither of them at the same time](https://blog.ncrunch.net/post/london-tdd-vs-detroit-tdd.aspx) . As I learnt throughout the almost five years I have been a professional Software Engineer, dogmatism will not take you very far in the real world, where projects should be delivered, product expectations are to be matched and you have bills to pay.
+So which one is right, Londoners or Detroitians?  [Both of them and neither of them at the same time](https://blog.ncrunch.net/post/london-tdd-vs-detroit-tdd.aspx) . As I learnt throughout the almost five years I have been a professional Software Engineer, dogmatism will not take you very far in the real world, where projects should be delivered, product expectations are to be matched and you have bills to pay.
 
 What you really need is to be able to take the  [best of both worlds](https://blog.ncrunch.net/post/london-tdd-vs-detroit-tdd.aspx) and use it in your favor. Use it wisely.
 
